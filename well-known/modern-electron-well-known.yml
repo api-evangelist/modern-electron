@@ -1,0 +1,106 @@
+generated: '2026-08-25'
+method: probed
+source: >-
+  Direct HTTP probes of every host associated with Modern Electron / Modern Hydrogen
+  on 2026-08-25. No .well-known document was served by any host; this file records
+  the absence. No WellKnown or SecurityTxt pointer is emitted, because nothing was found.
+note: >-
+  modernelectron.com issues a blanket 302 for every path to https://modernhydrogen.com/
+  (the company now trades as Modern Hydrogen). modernhydrogen.com resolves to Pantheon
+  (23.185.0.4) and, at probe time, answered every path — including the site root — with
+  the Pantheon platform "404 - Unknown site" page, while presenting a default
+  *.pantheonsite.io certificate that does not cover the domain. Every 404 below is
+  therefore a platform-level miss rather than a per-path miss, and no /.well-known
+  document could be confirmed either present or absent on a working origin.
+hosts:
+- host: modernhydrogen.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: modernelectron.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 302
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 302
+    file: null
+  - path: /.well-known/api-catalog
+    status: 302
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 302
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 302
+    file: null
+  - path: /.well-known/agent.json
+    status: 302
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run 2026-08-25. No OpenAPI, GraphQL, MCP, gRPC, WSDL or
+    AsyncAPI surface was found for this company on any host.
+  probes:
+  - url: https://modernhydrogen.com/openapi.json
+    status: 404
+  - url: https://modernhydrogen.com/openapi.yaml
+    status: 404
+  - url: https://modernhydrogen.com/swagger.json
+    status: 404
+  - url: https://modernhydrogen.com/api-docs
+    status: 404
+  - url: https://modernhydrogen.com/wp-json/
+    status: 404
+  - url: https://modernhydrogen.com/robots.txt
+    status: 404
+  - url: https://modernhydrogen.com/sitemap.xml
+    status: 404
+  - url: https://api.modernhydrogen.com/
+    status: 0
+    note: NXDOMAIN — no api. subdomain exists
+  - url: https://developer.modernhydrogen.com/
+    status: 0
+    note: NXDOMAIN — no developer. subdomain exists
+  - url: https://docs.modernhydrogen.com/
+    status: 0
+    note: NXDOMAIN — no docs. subdomain exists
+  - url: https://api.modernelectron.com/
+    status: 0
+    note: NXDOMAIN — no api. subdomain exists
+  - url: https://github.com/modernelectron
+    status: 200
+    note: >-
+      Real company GitHub org, titled "Modern Hydrogen", 6 repositories — all forks of
+      open-source scientific-computing projects (WarpX, AMReX, PICMI, GPy, warpx-data,
+      git-workshop). No first-party API, SDK or specification repository.
+  - url: https://registry.npmjs.org/modern-electron
+    status: 404
+  - url: https://registry.npmjs.org/modern-hydrogen
+    status: 404
+  - url: https://pypi.org/pypi/modern-electron/json
+    status: 404
+  - url: https://pypi.org/pypi/modern-hydrogen/json
+    status: 404

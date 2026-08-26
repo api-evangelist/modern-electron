@@ -1,0 +1,59 @@
+# Modern Electron (trading as Modern Hydrogen)
+
+> Energy-hardware company in Bothell, Washington. Founded 2015 by Tony Pan (CEO) and Max Mankin
+> (CTO) as a spin-out of Intellectual Ventures to commercialize advanced thermionic energy
+> converters — solid-state, direct heat-to-electricity devices. The company now operates publicly
+> as Modern Hydrogen, applying behind-the-meter methane pyrolysis to crack natural gas into
+> hydrogen and solid carbon before combustion.
+
+<!--
+generated: 2026-08-25
+method: generated
+source: apis.yml + API Evangelist enrichment probes (this file was authored by API Evangelist;
+        Modern Electron / Modern Hydrogen does not publish an llms.txt of its own —
+        https://modernhydrogen.com/llms.txt returned 404 on 2026-08-25)
+-->
+
+## What this company sells
+
+Physical equipment installed at customer sites, not software. Product lines described on the
+company's public site cover industrial heat and steam, on-site power generation, data-center
+energy, asphalt products made from the solid carbon by-product, and heavy-duty fleet fueling.
+
+## API surface
+
+**None found.** As of 2026-08-25 there is no public API, no developer portal, no SDK, and no
+machine-readable specification of any kind (OpenAPI, AsyncAPI, GraphQL SDL, Protobuf, WSDL,
+Postman collection or JSON Schema) published by this company. Contract discovery was run against
+every host associated with the company and every probe missed. See
+`well-known/modern-electron-well-known.yml` for the full probe table with HTTP statuses.
+
+## Domains
+
+- `modernelectron.com` — the legacy brand domain. Issues a blanket HTTP 302 for every path to
+  `https://modernhydrogen.com/`. HTTPS on this host did not complete a connection at probe time.
+- `modernhydrogen.com` — the current brand domain, hosted on Pantheon (23.185.0.4). At probe time
+  it served the Pantheon platform "404 - Unknown site" page for every path including the root, and
+  presented a default `*.pantheonsite.io` certificate that does not cover the domain. The Internet
+  Archive holds a working 200 snapshot from 2026-06-13, so this is a current site/TLS
+  misconfiguration rather than a company that has gone away.
+
+## Public code
+
+- GitHub organization: https://github.com/modernelectron — titled "Modern Hydrogen", 6
+  repositories, all forks of open-source scientific-computing projects (WarpX, AMReX, PICMI, GPy)
+  used in the company's own R&D. No first-party API, SDK or specification repository.
+- No package published under any Modern Electron / Modern Hydrogen name on npm, PyPI, RubyGems,
+  crates.io, NuGet, Maven Central or pkg.go.dev.
+
+## Artifacts in this profile
+
+- security/modern-electron-domain-security.yml — probed TLS/DNSSEC/CAA/SPF/DMARC posture
+- well-known/modern-electron-well-known.yml — probed /.well-known/* and contract-discovery table
+
+## Name collisions to avoid
+
+This company is unrelated to the Electron desktop application framework (electron/electron), to
+Shopify Hydrogen, and to Hydrogen Platform / hydrogenplatform.com (a fintech API company whose
+products are confusingly named "Electron", "Nucleus" and "Proton"). None of those APIs belong to
+Modern Electron.
